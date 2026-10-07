@@ -1,0 +1,21 @@
+# Python environments and generated Python files
+.venv/
+.venv-py313-backup/
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Downloaded datasets are reproducible and must not be committed.
+data/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# MLflow's local tracking directory, if created during later labs
+mlruns/

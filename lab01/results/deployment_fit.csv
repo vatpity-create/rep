@@ -1,0 +1,3 @@
+model,cloud_fit,edge_fit,mobile_fit,tinyml_fit,decision_basis
+LogisticRegression,yes,yes,yes,no,"Peak inference RSS, median one-sample latency, and serialized model size were compared with the stated upper budget for each target."
+RandomForestClassifier,yes,yes,yes,no,"Peak inference RSS, median one-sample latency, and serialized model size were compared with the stated upper budget for each target."

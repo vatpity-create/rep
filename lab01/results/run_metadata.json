@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "dataset": "sklearn.datasets.load_breast_cancer(return_X_y=True)",
+  "dataset_samples": 569,
+  "dataset_features": 30,
+  "train_samples": 398,
+  "test_samples": 171,
+  "split": "70/30 stratified, random_state=42",
+  "training_warmup_runs": 1,
+  "training_timed_runs": 5,
+  "inference_warmup_runs": 1,
+  "inference_timed_runs": 100,
+  "timing_clock": "time.perf_counter_ns",
+  "memory_measurement": "psutil.Process(os.getpid()).memory_info().rss sampled every 1 ms",
+  "python": "3.11.8",
+  "numpy": "1.26.4",
+  "scikit_learn": "1.5.0",
+  "torch": "2.3.1+cpu"
+}
