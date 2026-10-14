@@ -22,12 +22,18 @@ required top-level version, installs MLflow's dependencies first, then applies
 the course-mandated PyArrow pin. `requirements.txt` remains the authoritative
 list of required versions.
 
+## Run Lab 02
+
+Run `python main.py` to train all six NumPy network configurations and
+regenerate the evidence in `lab02/results/`. See `lab02/report.md` for
+the Ukrainian report and `lab02/src/run_lab.py` for the implementation.
+
 ## Run Lab 01
 
 From the repository root, run:
 
 ```powershell
-python main.py
+python lab01/src/run_lab.py
 ```
 
 The launcher first writes the interpreter and pinned package versions to

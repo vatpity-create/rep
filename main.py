@@ -1,9 +1,4 @@
-"""Convenience entry point for the first laboratory exercise.
-
-The laboratory implementation deliberately lives in lab01/src, as required by
-the course repository layout.  Running this file regenerates all Lab 01
-evidence from the pinned environment.
-"""
+"""Run Lab 02 and regenerate its numerical and graphical evidence."""
 
 from __future__ import annotations
 
@@ -14,7 +9,7 @@ from pathlib import Path
 
 def main() -> int:
     repository_root = Path(__file__).resolve().parent
-    runner = repository_root / "lab01" / "src" / "run_lab.py"
+    runner = repository_root / "lab02" / "src" / "run_lab.py"
     completed = subprocess.run([sys.executable, str(runner)], cwd=repository_root)
     return completed.returncode
 

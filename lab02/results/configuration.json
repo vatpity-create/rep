@@ -1,0 +1,15 @@
+{
+  "train_samples": 1257,
+  "test_samples": 540,
+  "batch_size": 32,
+  "epochs": 50,
+  "dtype": "float64",
+  "initialization": "normal(mean=0, std=0.01)",
+  "split_random_state": 42,
+  "init_seed": 42,
+  "shuffle_seed": 2026,
+  "timing_runs": 100,
+  "timing_warmups": 10,
+  "timing_batch_size": 32,
+  "blas_threads": 1
+}
