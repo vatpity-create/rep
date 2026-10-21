@@ -19,3 +19,6 @@ Thumbs.db
 
 # MLflow's local tracking directory, if created during later labs
 mlruns/
+
+# Optional local console transcript; numerical evidence is stored in CSV/JSON.
+lab03/results/run.log

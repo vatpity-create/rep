@@ -1,0 +1,23 @@
+suite,model,layer,formula,hand_flops,hand_parameters
+reference,MLP,linear1,2*784*256,401408,200960
+reference,MLP,linear2,2*256*128,65536,32896
+reference,MLP,linear3,2*128*10,2560,1290
+reference,CNN,conv1,2*3*3*1*16*28*28,225792,160
+reference,CNN,conv2,2*3*3*16*32*14*14,1806336,4640
+reference,CNN,classifier,2*1568*10,31360,15690
+reference,Attention,patch_projection,2*16*49*64,100352,3200
+reference,Attention,encoder1.qkv,2*16*64*3*64,393216,12480
+reference,Attention,encoder1.scores,2*16*16*64,32768,0
+reference,Attention,encoder1.weighted_values,2*16*16*64,32768,0
+reference,Attention,encoder1.output_projection,2*16*64*64,131072,4160
+reference,Attention,encoder1.ff1,2*16*64*128,262144,8320
+reference,Attention,encoder1.ff2,2*16*128*64,262144,8256
+reference,Attention,encoder1.two_layernorms,excluded from core FLOPs,0,256
+reference,Attention,encoder2.qkv,2*16*64*3*64,393216,12480
+reference,Attention,encoder2.scores,2*16*16*64,32768,0
+reference,Attention,encoder2.weighted_values,2*16*16*64,32768,0
+reference,Attention,encoder2.output_projection,2*16*64*64,131072,4160
+reference,Attention,encoder2.ff1,2*16*64*128,262144,8320
+reference,Attention,encoder2.ff2,2*16*128*64,262144,8256
+reference,Attention,encoder2.two_layernorms,excluded from core FLOPs,0,256
+reference,Attention,classifier,2*64*10,1280,650

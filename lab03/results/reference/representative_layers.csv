@@ -1,0 +1,4 @@
+suite,model,layer,hand_flops,thop_macs,thop_flops,gap_percent
+reference,MLP,Linear 784 to 256,401408,200704,401408,0.0
+reference,CNN,Conv2d 1 to 16,225792,112896,225792,0.0
+reference,Attention,MultiheadAttention L=16 d=64 h=4,589824,294912,589824,0.0

@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "models": 6,
+  "completed_epochs": 30,
+  "raw_latency_runs": 720,
+  "train_samples": 55000,
+  "validation_samples": 5000,
+  "test_samples": 10000,
+  "checks": [
+    "split coverage, disjointness, seed and SHA-256",
+    "five full train/validation epochs per model",
+    "manual, torchinfo, THOP and checkpoint parameter counts",
+    "manual and THOP whole-model core FLOPs",
+    "independent representative-layer THOP profiles",
+    "strict checkpoint restoration, finite weights and recorded test accuracy",
+    "100/20 raw latency runs, medians, quartiles and per-image units"
+  ]
+}

@@ -1,0 +1,4 @@
+suite,model,layer,hand_flops,thop_macs,thop_flops,gap_percent
+matched,MLP,Linear 784 to 128,200704,100352,200704,0.0
+matched,CNN,Conv2d 1 to 48,677376,338688,677376,0.0
+matched,Attention,MultiheadAttention L=16 d=84 h=4,989184,494592,989184,0.0
