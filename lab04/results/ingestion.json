@@ -1,0 +1,24 @@
+{
+  "rows": 48842,
+  "columns": 15,
+  "column_names": [
+    "age",
+    "workclass",
+    "fnlwgt",
+    "education",
+    "education-num",
+    "marital-status",
+    "occupation",
+    "relationship",
+    "race",
+    "sex",
+    "capital-gain",
+    "capital-loss",
+    "hours-per-week",
+    "native-country",
+    "class"
+  ],
+  "openml_id": 1590,
+  "version": 2,
+  "ingested_frame_sha256": "ab695ce5f648d49d89d137efc39f90971d935c79a8344eba7d2c3370a5eca8d7"
+}

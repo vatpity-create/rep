@@ -22,22 +22,28 @@ required top-level version, installs MLflow's dependencies first, then applies
 the course-mandated PyArrow pin. `requirements.txt` remains the authoritative
 list of required versions.
 
+## Run Lab 04
+
+Run `python main.py` to reproduce the Adult data pipeline, validation report,
+LogisticRegression comparison, processed-data SHA256 and data card.
+See `lab04/report.md` and `lab04/config.yaml` for the method and settings.
+
 ## Run Lab 03
 
-Run `python main.py` to train and compare MLP, CNN, and patch-attention models
-on Fashion-MNIST. The launcher uses the project `.venv` if the current Python
-does not have PyTorch. Each model trains for five epochs with Adam, lr 0.001,
+Run `python lab03/src/run_lab.py` in the activated environment to train and compare
+MLP, CNN, and patch-attention models on Fashion-MNIST.
+Each model trains for five epochs with Adam, lr 0.001,
 batch size 128, using the shared 55k/5k/10k train/validation/test split.
 
 The manual's exact layer sizes do not meet its 100k–150k parameter target.
 The default run therefore includes both the exact `reference` architectures
 and a separate `matched` comparison with approximately 119k parameters each.
-Use `python main.py --suite reference` for only the exact manual models, or
-`python main.py --suite matched` for only the size-matched models.
+Use `python lab03/src/run_lab.py --suite reference` for only the exact manual models, or
+`python lab03/src/run_lab.py --suite matched` for only the size-matched models.
 
 Results, checkpoints, raw latency samples, torchinfo summaries, and PNG/SVG
-plots are saved in `lab03/results/`. The Ukrainian `lab03/report.md` is generated
-from the actual results. Run `python main.py --report-only` to rebuild plots
+plots are saved in `lab03/results/`. The report in `lab03/report.md` is generated
+from the actual results. Run `python lab03/src/run_lab.py --report-only` to rebuild plots
 and the report without training. CPU timing defaults to two intra-op threads;
 use `--threads` and `--device cpu` / `--device cuda` to select the environment.
 
@@ -51,7 +57,7 @@ Run the focused architecture and FLOPs checks with:
 
 Run `python lab02/src/run_lab.py` to train all six NumPy network configurations and
 regenerate the evidence in `lab02/results/`. See `lab02/report.md` for
-the Ukrainian report and `lab02/src/run_lab.py` for the implementation.
+the report and `lab02/src/run_lab.py` for the implementation.
 
 ## Run Lab 01
 

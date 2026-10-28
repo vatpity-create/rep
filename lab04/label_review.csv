@@ -1,0 +1,51 @@
+source_row,record_sha256,finding
+7762,2047a9aac130c4ee86ff510f2dc755c4116b5080d8a2bb2fe5e52c5be4982f42,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+23881,f98476a8e6c7d27aca4b6b89c1c917dc8f238f9b767a5b5716de2619575ff0a7,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+30507,3243118c09ef2b1dee3252ebf0a5375343b278642ef3c993e65bed43ce7e26bd,Capital-gain 14344 is within range; Bachelors and education-num 13 are consistent.
+28911,4226a7f5ed25d7f4fad97972423707bc3943215b8fefb4b6363d56e26e53ebd3,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+19484,df5d27436d56f46d6d0b72fd6273f7c91a19567afbc8b020d2940a0b5ff6348e,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+43031,7bd3f712f99b38b6f90ce559a339a44f8208d9e016b5f4a0b0e59b5d9d7c7022,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+28188,1473265f32d3295c6a7aa7957fb3cb086e01d1c006efd4a226457aa9e1df6d82,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+12761,2d87257381797d9f15f69c3565fbce548369d84bcba835d0312c58fa49b26c3a,Capital-loss 1887 is within range; Bachelors and education-num 13 are consistent.
+40834,ad8639cb7db8cf92c65b670f519880426444c66d16b74265318b1b4b81516b06,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+27875,e465b95f6cf5b8dd9224f28763b7881876cc78b93839e462da05f0f70f378fd1,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+1276,781b2e2b9331680e3d1a8f3931cb3ad5e3a9efbeb952f2608355d00f2748c3a1,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+22608,e4d884aa329c04f9be714aec0bb3c5cced88cb8eb17b95e364bca11578604616,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+36230,a71e87872b47c3563c6871692117373a0383ceac6e54ac408cd6df8c86aa9c3e,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+13398,af5aea514ba0eab95003bca6b3bb68cdab78e3110119acbbc17d87baf4f82b49,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+43536,5dacc4e8301383975a473d86c2be544d8d0faebb39120db445a391f67af0dff0,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+18627,149022105e9762f0f4e1778ef8a06ad29069ab4b88cc55f5c825c0f83ba5b51b,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+38424,e99f10460cac1cefff1590b7b794b584d6ac1b2d97cdf2325627adbc72d189c4,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+35505,d969c9bce863bfe7dd5dea39b04f37b50313135740c138e8e9049e664395d4bf,5th-6th education and education-num 3 are consistent; no impossible values found.
+2372,bdf038b32539de05521b95a15e82f4cc1261149d5d7288f745a0cd983a3905d7,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+3375,96b5b57816acc18c1ba40b229108318e707e7a05bc50dc2e692d7734c023e9c2,4 hours per week is unusual but within the allowed 1-99 range.
+28331,cce0d5324a4a0a9d3f0bc8485ae484b541c5122d53a58a3e8586b19ad452d085,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+46820,0304a4ae2956c3ec0c2b0bed7b70a5eca628625f7e3c5a25f88dfed68013ca6f,Doctorate and education-num 16 are consistent; capital-loss 3004 is within range.
+147,96e4914ab18c99d12cd6926a40218f13748c93042f3f6047362c4e391f775c7e,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+21063,b71702c5e4be764028f0b571d6f8a02a8eb4e4318a96a2c482a9d6aef767fb07,Missing workclass and occupation are permitted; age 67 and capital-gain 9386 are within range.
+20139,479b9536057724bb23b0e7d485918ce6c34e7c905b058956dfd64eb15f4c1976,Missing native-country is permitted; all observed values are plausible.
+23288,931889aa7fe215cccc2d24ba1c3b29c757b104e14d56fb7684ff11e1315903d6,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+18957,d3d215da5def52969ae4333441287155afd83d19cd8ff94559ed7d30a182bf4e,Missing workclass and occupation are permitted; all observed values are plausible.
+31256,a580785942b9dd15628e9c699e58c6341ace1fd87a1f2aa157beb108c010a7c2,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+29642,886f442749557875c00b2b6144492abfb5596272c31532c538eca3f573940f6a,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+23638,ab4270c707a553daaab1424dd10bec348a379de0ce426ce2a9977ca780321026,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+18067,40b42d944206163621249f9f8df70a463207ecfb92eab0d9bdc4cb36239f01bb,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+879,0c897f5386cf23f4b10be72534f6ecfb3e351dd92c694842892b579a3ab53a97,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+7155,2f0515c12a59f4fd1a22e2b5a9b0bb2e484800467de6ad6e54e296bf5131ade9,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+43769,8b2bef279f530ac7797641046a61e0b8dff0fb60d73575c49c2109b7b6dbded3,75 weekly hours is within range; 5th-6th education and education-num 3 are consistent.
+17697,9032bbaad998cdd32906ecdad27ee754485383d8aac538d792376d7b1a31a973,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+21167,af13ff51dacf53d1eb0736915c80a0f3adbfb18188ea121dc31caf9c0c6e9b03,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+3136,fa4acdb9a479e3e08a0f313341b41b55fc87f54e790f0038a253a3c12190e98e,84 hours per week is high but within the allowed 1-99 range.
+34254,e9243f3253120b75593584ea993df16335566729cc57d4e457942f89e451d5de,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+17657,1ef65044dd34f9b0b4c239853a7082ebda085ed117ee2365798b6c171c9b59dd,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+37254,3b061865fbf490554360bf694b0a40acefd6b8040e29e2365412e6806c52e24d,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+1422,ae11c6714a4a23b3673ae05a8eb67f912d34db7877652203a2261d5ba8582368,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+32507,331319b3e92bcd6683bd8883f17f408bbd8f6d70e04b9b63834c2ef9fbedb78c,Age 18 and 11th-grade education are plausible; 15 weekly hours is within range.
+30150,342db30c5057dab8a1fe1f8639a24f3126df3b3fe3f0ca221c47b20a4e428d27,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+14172,f2c76ade05d54d7fdcf3f2a9ef756fdce132f35faf841dbb31c0e539d1c9665d,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+32273,32b3f23b9deb5ee39b3758beac096acd61f6ae2a884342fbe1d4f62c811c9df2,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+48262,8c702056aff68fa7057c391bcb7743a297de431c0bbf2bcac6641929b73d464b,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+10007,61b14ba54c78baa7526e87f86af115e9ee3e74dc42b1537df05c3e04a7d83c3b,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+47649,33c40ec31481ac8b46e30ca55b212051475d46a02aec328c2375a134dc73a67c,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+43058,f957d923933d4311c37aea27cb4d607a8c3121c0efb1b5f0118c49a547eac170,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."
+708,0e6d9915ba7f82a52802d165b345a05f78dd4c1b9767beff74bccacbc43f4cc7,"No impossible values found; numerical values, categories and education fields are consistent with the dictionary."

@@ -1,16 +1,16 @@
-# Lab 2: нейронна мережа з нуля
+# Lab 2: Neural network from scratch
 
-## Дані й архітектура
+## Data and architecture
 
-`load_digits`: 1797 зображень 8×8, 10 класів. Пікселі поділено на 16,
-мітки закодовано one-hot. Стратифікований поділ 70/30, random_state=42:
-1257 навчальних і 540 тестових прикладів.
+`load_digits` contains 1,797 images of size 8×8 and 10 classes. Pixel values are
+divided by 16 and labels are one-hot encoded. A stratified 70/30 split with
+random_state=42 gives 1,257 training and 540 test examples.
 
-Схема: **64 → W → ReLU → W → ReLU → 10 → softmax**, W=16 або 64.
-Ваги: нормальний розподіл із середнім 0, стандартним відхиленням 0.01.
-Зміщення нульові. Навчання реалізовано в NumPy float64 без autograd.
+Architecture: **64 → W → ReLU → W → ReLU → 10 → softmax**, with W=16 or 64.
+Weights are sampled from a normal distribution with mean 0 and standard deviation
+0.01; biases start at zero. Training uses NumPy float64 and manual gradients.
 
-| Параметр | W=16 | W=64 |
+| Parameter | W=16 | W=64 |
 |---|---|---|
 | W1 | (64,16) | (64,64) |
 | b1 | (16,) | (64,) |
@@ -18,11 +18,11 @@
 | b2 | (16,) | (64,) |
 | W3 | (16,10) | (64,10) |
 | b3 | (10,) | (10,) |
-| Всього параметрів | 1482 | 8970 |
+| Total parameters | 1482 | 8970 |
 
-## Прямий прохід і виведення градієнтів
+## Forward pass and gradients
 
-Для пакета B прикладів:
+For a batch of B examples:
 
 ```text
 Z1 = X W1 + b1; A1 = max(0,Z1)
@@ -31,13 +31,13 @@ Z3 = A2 W3 + b3; P = softmax(Z3)
 L = −(1/B) Σ_i Σ_k Y_ik log(P_ik)
 ```
 
-Softmax віднімає максимум кожного рядка; loss використовує стабільний
-log-softmax. Перевірено форму (B,10) та суми рядків 1 з похибкою ≤1e−6.
-Початкові втрати 2.30258552 і 2.30259249 близькі до ln(10)=2.30258509.
+Softmax subtracts each row's maximum, and the loss uses stable log-softmax.
+The output shape (B,10) and row sums of 1 were checked with tolerance 1e−6.
+Initial losses of 2.30258552 and 2.30258549 are close to ln(10)=2.30258509.
 
-Похідна softmax разом із cross-entropy дає (P−Y)/B.
-Похідна ReLU: 1 для додатного аргументу, 0 для від'ємного; у нулі
-реалізація обирає 0. За правилом ланцюга:
+The combined softmax and cross-entropy derivative is (P−Y)/B. The ReLU derivative
+is 1 for positive inputs and 0 otherwise, including zero in this implementation.
+Applying the chain rule gives:
 
 ```text
 D3 = (P − Y)/B                     [B,10]
@@ -52,31 +52,34 @@ D1 = (D2 W2ᵀ) ⊙ (Z1 > 0)         [B,W]
 θ ← θ − η ∂L/∂θ
 ```
 
-⊙ — поелементний добуток; усереднення за B виконується один раз.
-Для прогнозування обирається argmax(P).
+Here, ⊙ denotes element-wise multiplication. Gradients are averaged over B once.
+Predictions use argmax(P).
 
-## Чисельна перевірка
+## Gradient check
 
-По 10 різних випадкових ваг для кожної ширини, без повторного вибору,
-перевірено на пакеті 32. Центральна різниця:
-g_num=[L(θ+ε)−L(θ−ε)]/(2ε), ε=1e−5.
-Похибка: |g−g_num|/max(1e−12,|g|+|g_num|).
-Обидві мережі пройшли **10/10**, поріг <1e−6, вимога ≥9/10.
-Деталі: `results/gradient_check.csv`.
+Ten distinct random weight coordinates were checked for each width using a batch
+of 32 and the central difference:
 
-Малі початкові градієнти спричиняють втрату точності при прямому
-відніманні двох втрат близько 2.3. Тому чисельну різницю обчислено
-еквівалентно через log1p/expm1. Для δ=Z3_plus−Z3_minus різниця
-log-sum-exp дорівнює log1p(Σ_k P_minus,k expm1(δ_k)); з неї
-віднімається Σ_k Y_k δ_k, після чого результат усереднюється.
-Цей розрахунок використовує тільки прямі проходи, без аналітичних похідних.
+```text
+g_num = [L(θ+ε) − L(θ−ε)] / (2ε), ε=1e−5
+relative error = |g−g_num| / max(1e−12, |g|+|g_num|)
+```
 
-## Навчання й результати
+Both widths passed **10/10** checks at a relative-error threshold of 1e−6;
+the requirement is at least 9/10. Results are in `results/gradient_check.csv`.
 
-50 епох, shuffle кожної епохи, batch_size=32 (останній пакет 9).
-Для кожного запуску ваги ініціалізуються заново з seed=42,
-shuffle має seed=2026. Втрати на графіку виміряно на всій навчальній
-вибірці після епохи. Тестова вибірка не бере участі в оновленні ваг.
+Subtracting two losses near 2.3 loses precision when the initial gradients are
+small. The implementation therefore computes the same loss difference using
+log1p and expm1. For δ=Z3_plus−Z3_minus, the log-sum-exp difference is
+`log1p(Σ_k P_minus,k expm1(δ_k))`. It subtracts `Σ_k Y_k δ_k` and averages the
+result. This numerical check uses forward passes only.
+
+## Training results
+
+Each configuration trains for 50 epochs with shuffled batches of 32; the last
+batch contains 9 examples. Weights are reset with seed=42 before each run, and
+the shuffle seed is 2026. The plotted loss is measured on the full training set
+after each epoch. Test data are excluded from weight updates.
 
 | W | η | Train loss | Test accuracy | Forward, ms | Backward, ms |
 |---|---|---|---|---|---|
@@ -87,28 +90,32 @@ shuffle має seed=2026. Втрати на графіку виміряно на
 | 64 | 0.01 | 2.302348 | 10.19% | 0.14160 | 0.17325 |
 | 64 | 0.1 | 0.288016 | 89.44% | 0.19045 | 0.21985 |
 
-![Криві втрат](results/loss_curves.png)
+![Training loss curves](results/loss_curves.png)
 
-## Час і висновки
+## Timing and conclusions
 
-Час — медіана 100 запусків після 10 прогрівів, пакет 32, один потік BLAS.
-Backward використовує готовий кеш і не включає forward або оновлення ваг.
-Forward має три матричні множення, backward — п'ять (три для градієнтів
-ваг і два для передачі похибки). Для W=64 backward повільніший у всіх
-трьох вимірюваннях. Для W=16 backward також повільніший, але часи близькі.
-Для малих матриць накладні витрати NumPy, softmax і шум
-таймера також суттєві. Часи залежать від комп'ютера й навантаження.
-Витрати середнього шару зростають як B·W², інших — B·64·W та B·W·10.
+Timings are medians of 100 runs after 10 warmups, using a batch of 32 and one
+BLAS thread. Backward uses a prepared cache and excludes the forward pass and
+weight update. Forward performs three matrix products; backward performs five:
+three for weight gradients and two for error propagation.
 
-Найкращий результат: W=64, η=0.1, точність 89.44%.
-Малі η за 50 епох майже не зменшили loss; мала ініціалізація дає
-слабкий початковий сигнал через два приховані шари. Це висновок
-для заданої конфігурації, а не загальна оцінка цих learning rates.
+Backward was slower for every configuration, although the W=16 times were close.
+For these small matrices, NumPy overhead, softmax and timer noise also contribute.
+The middle layer scales as B·W²; the other layers scale as B·64·W and B·W·10.
 
-## Відтворення
+The best result was **89.44%** with W=64 and η=0.1. The smaller learning rates
+barely reduced loss in 50 epochs. Small initial weights produce a weak gradient
+through the two hidden layers in this configuration.
 
-З кореня: `.\.venv\Scripts\python.exe main.py` або
-`python lab02/src/run_lab.py`. Потрібні NumPy, Matplotlib, scikit-learn
-і threadpoolctl (залежність scikit-learn).
-Артефакти: `results/loss_curves.png`, `metrics.csv`, `training_history.csv`,
-`gradient_check.csv`, `configuration.json`. Лог цього запуску: `results/run.log`.
+## Reproduction
+
+From the repository root, using the activated environment:
+
+```powershell
+python lab02/src/run_lab.py
+```
+
+Dependencies are NumPy, Matplotlib, scikit-learn and threadpoolctl.
+Results are saved as `results/loss_curves.png`, `metrics.csv`,
+`training_history.csv`, `gradient_check.csv` and `configuration.json`.
+The original run log is `results/run.log`.

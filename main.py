@@ -1,4 +1,4 @@
-"""Run Lab 03 and regenerate its numerical and graphical evidence."""
+"""Run Lab 04."""
 
 from __future__ import annotations
 
@@ -10,9 +10,9 @@ from pathlib import Path
 
 def main() -> int:
     repository_root = Path(__file__).resolve().parent
-    runner = repository_root / "lab03" / "src" / "run_lab.py"
+    runner = repository_root / "lab04" / "src" / "run_lab.py"
     interpreter = Path(sys.executable)
-    if find_spec("torch") is None:
+    if find_spec("pandas") is None:
         candidates = (
             repository_root / ".venv" / "Scripts" / "python.exe",
             repository_root / ".venv" / "bin" / "python",

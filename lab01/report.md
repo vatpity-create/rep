@@ -1,5 +1,11 @@
 # Lab 01 - Environment and first system measurements
 
+Run from the repository root in the activated environment:
+
+```powershell
+python lab01/src/run_lab.py
+```
+
 ## Goal
 
 Create a reproducible Python 3.11.8 environment; train the required logistic
@@ -30,8 +36,8 @@ unchanged because it is the baseline required by the assignment.
 
 | Model | Test accuracy | Median training time (ms) | Median one-sample latency (us) | Model size (KiB) | Peak inference RSS (MiB) |
 |---|---:|---:|---:|---:|---:|
-| LogisticRegression | 0.9415 | 1111.232 | 363.900 | 1.030 | 230.062 |
-| RandomForestClassifier | 0.9357 | 456.543 | 8108.550 | 284.071 | 231.285 |
+| LogisticRegression | 0.9415 | 1241.441 | 195.700 | 1.030 | 228.727 |
+| RandomForestClassifier | 0.9357 | 462.951 | 11275.600 | 284.071 | 229.930 |
 
 The detailed, machine-readable evidence is in:
 
@@ -56,13 +62,11 @@ still fits that platform's maximum budget.
 
 1. On this fixed 70/30 split, the logistic-regression baseline generalized a
    little better: 0.9415 test accuracy versus 0.9357 for the random forest.
-   This shows that a more complex ensemble is not automatically the most
-   accurate choice for this small tabular dataset.
 2. The forest trained faster on this machine, but its single-example inference
-   was about 22 times slower (8108.550 us versus 363.900 us) and its serialized
+   was about 58 times slower (11275.600 us versus 195.700 us) and its serialized
    artifact was about 276 times larger. For latency-sensitive serving, the
    linear model is therefore the stronger trade-off here.
 3. Both artifacts and their measured Python-process inference RSS fit the
    stated Cloud, Edge, and Mobile upper budgets. Neither is a TinyML candidate:
-   the Python runtime alone is about 230 MiB, far above 256 KiB; additionally,
+   the measured Python process uses about 229–230 MiB, far above 256 KiB; additionally,
    the forest artifact exceeds the 100 KiB TinyML size limit.

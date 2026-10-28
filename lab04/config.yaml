@@ -1,0 +1,78 @@
+dataset:
+  name: adult
+  version: 2
+  as_frame: true
+  expected_rows: 48842
+  expected_columns: 15
+  source_target: class
+  positive_label: '>50K'
+split:
+  test_size: 0.30
+  stratify: true
+  random_state: 42
+preprocessing:
+  numeric_imputation: median
+  categorical_imputation: most_frequent
+  lower_quantile: 0.01
+  upper_quantile: 0.99
+  duplicate_policy: drop_exact_training_rows_only
+  numeric_scaling: standard
+  categorical_encoding: one_hot
+  unknown_categories: ignore
+features:
+  capital_net: capital-gain - capital-loss
+  hours_per_age: hours-per-week / (age - 16)
+model:
+  name: LogisticRegression
+  solver: lbfgs
+  C: 1.0
+  max_iter: 2000
+  random_state: 42
+audit:
+  sample_size: 50
+  random_state: 42
+schema:
+  age:
+    type: int
+    range: [17, 90]
+  workclass:
+    type: category
+    categories: [Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked, '?']
+  fnlwgt:
+    type: int
+  education:
+    type: category
+    categories: [Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, Assoc-voc, 9th, 7th-8th, 12th, Masters, 1st-4th, 10th, Doctorate, 5th-6th, Preschool, '?']
+  education-num:
+    type: int
+  marital-status:
+    type: category
+    categories: [Married-civ-spouse, Divorced, Never-married, Separated, Widowed, Married-spouse-absent, Married-AF-spouse, '?']
+  occupation:
+    type: category
+    categories: [Tech-support, Craft-repair, Other-service, Sales, Exec-managerial, Prof-specialty, Handlers-cleaners, Machine-op-inspct, Adm-clerical, Farming-fishing, Transport-moving, Priv-house-serv, Protective-serv, Armed-Forces, '?']
+  relationship:
+    type: category
+    categories: [Wife, Own-child, Husband, Not-in-family, Other-relative, Unmarried, '?']
+  race:
+    type: category
+    categories: [White, Asian-Pac-Islander, Amer-Indian-Eskimo, Other, Black, '?']
+  sex:
+    type: category
+    categories: [Female, Male, '?']
+  capital-gain:
+    type: int
+    range: [0, 99999]
+  capital-loss:
+    type: int
+    range: [0, 4356]
+  hours-per-week:
+    type: int
+    range: [1, 99]
+  native-country:
+    type: category
+    categories: [United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad&Tobago, Peru, Hong, Holand-Netherlands, '?']
+  income:
+    source: class
+    type: category
+    categories: ['<=50K', '>50K', '?']

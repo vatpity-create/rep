@@ -1,0 +1,7 @@
+feature,median,percentile_01,percentile_99
+age,37,17,74
+fnlwgt,178272,27035.200000000001,509629
+education-num,10,3,16
+capital-gain,0,0,15024
+capital-loss,0,0,1980
+hours-per-week,40,8,80
