@@ -1,0 +1,7 @@
+node,operation,target,shape,dtype,stride
+input_1,placeholder,input,"(128, 2)",torch.float64,"(2, 1)"
+_0,call_module,0,"(128, 8)",torch.float64,"(8, 1)"
+_1,call_module,1,"(128, 8)",torch.float64,"(8, 1)"
+_2,call_module,2,"(128, 1)",torch.float64,"(1, 1)"
+_3,call_module,3,"(128, 1)",torch.float64,"(1, 1)"
+output,output,output,"(128, 1)",torch.float64,"(1, 1)"

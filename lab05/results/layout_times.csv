@@ -1,0 +1,3 @@
+variant,median_ms,p25_ms,p75_ms,runs,calls_per_run
+contiguous,3.559225,3.385455,3.8085549999999997,100,10
+non_contiguous,4.71813,4.4554175,5.02168,100,10

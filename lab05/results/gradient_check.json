@@ -1,0 +1,14 @@
+{
+  "expression": "((a*b+c)**2).relu().sum()",
+  "checked_derivatives": 48,
+  "epsilon": 1e-06,
+  "tolerance": 1e-06,
+  "max_torch_absolute_error": 0.0,
+  "max_numerical_absolute_error": 1.1744150096859585e-09,
+  "topological_order": true,
+  "shared_subgraph_accumulation": true,
+  "repeated_backward_accumulation": true,
+  "relu_boundaries": true,
+  "constant_powers": true,
+  "sigmoid_bce_gradients": true
+}

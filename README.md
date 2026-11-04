@@ -22,9 +22,15 @@ required top-level version, installs MLflow's dependencies first, then applies
 the course-mandated PyArrow pin. `requirements.txt` remains the authoritative
 list of required versions.
 
+## Run Lab 05
+
+Run `python main.py` to verify the scalar autodiff engine, train the make_moons
+model, and measure execution modes and tensor contiguity. Results and the report
+are saved in `lab05/`. See `lab05/report.md` for the settings and measurements.
+
 ## Run Lab 04
 
-Run `python main.py` to reproduce the Adult data pipeline, validation report,
+Run `python lab04/src/run_lab.py` to reproduce the Adult data pipeline, validation report,
 LogisticRegression comparison, processed-data SHA256 and data card.
 See `lab04/report.md` and `lab04/config.yaml` for the method and settings.
 

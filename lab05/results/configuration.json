@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "python": "3.11.8",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "torch": "2.3.1+cpu",
+    "numpy": "1.26.4",
+    "sklearn": "1.5.0"
+  },
+  "device": "cpu",
+  "dtype": "float64",
+  "torch_threads": 1,
+  "torch_interop_threads": 1,
+  "deterministic_algorithms": true,
+  "dataset": "make_moons",
+  "samples": 128,
+  "noise": 0.1,
+  "architecture": "2 -> 8 -> ReLU -> 1 -> sigmoid",
+  "parameters": 33,
+  "loss": "binary cross-entropy",
+  "optimizer": "SGD",
+  "learning_rate": 0.1,
+  "epochs": 100,
+  "batch_size": 128,
+  "training_runs": 5,
+  "training_timing": "training loop only; excludes data, model and optimizer construction and final evaluation",
+  "shared_initialization": "NumPy default_rng(42), normal(0,0.5) weights and zero biases",
+  "maximum_trained_parameter_difference": 1.1102230246251565e-16,
+  "execution": {
+    "mode": "compiled",
+    "backend": "inductor",
+    "fallback_reason": "",
+    "setup_and_first_forward_ms": 11.560299986740574,
+    "max_output_difference": 0.0,
+    "warmups": 30,
+    "runs": 100,
+    "calls_per_run": 100,
+    "batch_size": 128
+  },
+  "layout_operation": "softmax(dim=1)",
+  "layout_shape": [
+    512,
+    512
+  ],
+  "layout_warmups": 30,
+  "layout_runs": 100,
+  "layout_calls_per_run": 10
+}

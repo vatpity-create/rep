@@ -5,7 +5,7 @@
 From the repository root:
 
 ```powershell
-python main.py
+python lab04/src/run_lab.py
 ```
 
 The command fetches Adult version 2, validates the original frame, splits it,

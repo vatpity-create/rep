@@ -1,0 +1,4 @@
+tensor,shape,dtype,stride,contiguous,bytes
+model_input,"(128, 2)",torch.float64,"(2, 1)",True,2048
+transposed_view,"(512, 512)",torch.float64,"(1, 512)",False,2097152
+contiguous_copy,"(512, 512)",torch.float64,"(512, 1)",True,2097152

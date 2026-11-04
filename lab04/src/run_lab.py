@@ -195,7 +195,7 @@ def write_report(metrics, counts, labels, digest):
 From the repository root:
 
 ```powershell
-python main.py
+python lab04/src/run_lab.py
 ```
 
 The command fetches Adult version 2, validates the original frame, splits it,
@@ -363,7 +363,7 @@ is part of this pipeline.
 
 ## Reproduction and storage
 
-Run `python main.py` from the repository root. `config.yaml` contains the source
+Run `python lab04/src/run_lab.py` from the repository root. `config.yaml` contains the source
 version, seed, schema, transformations and model settings. Package versions and
 the complete run configuration are saved in `results/configuration.yaml`.
 The fitted transformer is `results/preprocessor.joblib`; processed features,
