@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/igorv/PycharmProjects/proj/lab06/results/tracking/649445612195264943/9fb23baf959b4177a6e4aa8014b9d404/artifacts
+end_time: 1795175704357
+entry_point_name: ''
+experiment_id: '649445612195264943'
+lifecycle_stage: active
+run_id: 9fb23baf959b4177a6e4aa8014b9d404
+run_name: schedule_CosineAnnealingLR
+run_uuid: 9fb23baf959b4177a6e4aa8014b9d404
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795174384872
+status: 3
+tags: []
+user_id: igorv

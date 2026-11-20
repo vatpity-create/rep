@@ -1,0 +1,17 @@
+{
+  "experiment": "schedule_ReduceLROnPlateau",
+  "run_id": "dba1002e894c434cbd02a7e532960711",
+  "epochs": 10,
+  "batch_size": 128,
+  "effective_batch_size": 128,
+  "num_workers": 1,
+  "optimizer": "Adam",
+  "scheduler": "ReduceLROnPlateau",
+  "throughput_samples_s": 485.935849474984,
+  "peak_rss_mib": 848.40234375,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.9266,
+  "test_accuracy": 0.9242,
+  "test_loss": 0.2311069595336914,
+  "test_samples": 10000
+}

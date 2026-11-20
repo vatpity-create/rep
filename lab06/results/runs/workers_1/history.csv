@@ -1,0 +1,2 @@
+epoch,learning_rate,train_loss,train_accuracy,train_samples,optimizer_updates,training_seconds,throughput_samples_s,loader_startup_seconds,steady_throughput_samples_s,peak_rss_mib,initial_rss_mib,peak_gpu_allocated_mib,data_loading_seconds,forward_seconds,backward_seconds,optimizer_step_seconds,validation_loss,validation_accuracy
+1,0.001,0.4266092218572443,0.8496,55000,430,87.74151249998249,626.8412571530605,4.5308109000034165,660.9726746975756,783.44921875,383.609375,0.0,5.043664799799444,40.16850860018167,40.427789500157814,1.9618892997386865,0.35104637756347656,0.869

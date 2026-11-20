@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/igorv/PycharmProjects/proj/lab06/results/tracking/649445612195264943/13510b7d744a44218b9355afaaaa37aa/artifacts
+end_time: 1795174365204
+entry_point_name: ''
+experiment_id: '649445612195264943'
+lifecycle_stage: active
+run_id: 13510b7d744a44218b9355afaaaa37aa
+run_name: schedule_StepLR
+run_uuid: 13510b7d744a44218b9355afaaaa37aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795023606008
+status: 3
+tags: []
+user_id: igorv

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/igorv/PycharmProjects/proj/lab06/results/tracking/649445612195264943/dba1002e894c434cbd02a7e532960711/artifacts
+end_time: 1795176903735
+entry_point_name: ''
+experiment_id: '649445612195264943'
+lifecycle_stage: active
+run_id: dba1002e894c434cbd02a7e532960711
+run_name: schedule_ReduceLROnPlateau
+run_uuid: dba1002e894c434cbd02a7e532960711
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1795175722962
+status: 3
+tags: []
+user_id: igorv

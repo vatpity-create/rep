@@ -1,0 +1,17 @@
+{
+  "experiment": "optimizer_SGD",
+  "run_id": "d203a637190445b28a9c3d69d8fe9faa",
+  "epochs": 10,
+  "batch_size": 128,
+  "effective_batch_size": 128,
+  "num_workers": 1,
+  "optimizer": "SGD",
+  "scheduler": "CosineAnnealingLR",
+  "throughput_samples_s": 675.3671737585731,
+  "peak_rss_mib": 842.5546875,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.915,
+  "test_accuracy": 0.9156,
+  "test_loss": 0.24612385864257813,
+  "test_samples": 10000
+}

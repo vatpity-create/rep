@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-11-18T17:40:06.173960+00:00",
+  "python": "3.11.8 (tags/v3.11.8:db85d51, Feb  6 2024, 22:03:32) [MSC v.1937 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+  "logical_cpus": 12,
+  "device": "cpu",
+  "threads": 4,
+  "parameters": 118634,
+  "dtype": "float32",
+  "packages": {
+    "torch": "2.3.1",
+    "torchvision": "0.18.1",
+    "mlflow": "2.14.1",
+    "numpy": "1.26.4",
+    "pandas": "2.2.2",
+    "matplotlib": "3.9.0",
+    "PyYAML": "6.0.3"
+  },
+  "split": {
+    "train_samples": 55000,
+    "validation_samples": 5000,
+    "test_samples": 10000,
+    "train_indices_sha256": "5a90776050dd386793d0cdc11f2d2eb4fbe8eb37f61a376d4228275e5a1fb0c1",
+    "validation_indices_sha256": "a26af046450eeeac4ef09b98508d79c0dd47c6c4ba416a2da3a75003340369bb"
+  },
+  "mlflow_run_id": "13510b7d744a44218b9355afaaaa37aa"
+}

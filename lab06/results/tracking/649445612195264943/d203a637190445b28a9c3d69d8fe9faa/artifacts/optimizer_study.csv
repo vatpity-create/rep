@@ -1,0 +1,3 @@
+experiment,run_id,epochs,batch_size,effective_batch_size,num_workers,optimizer,scheduler,throughput_samples_s,peak_rss_mib,peak_gpu_allocated_mib,validation_accuracy,test_accuracy,test_loss,test_samples
+schedule_CosineAnnealingLR,9fb23baf959b4177a6e4aa8014b9d404,10,128,128,1,Adam,CosineAnnealingLR,434.61383007371217,848.96875,0.0,0.9262,0.925,0.2198191146850586,10000
+optimizer_SGD,d203a637190445b28a9c3d69d8fe9faa,10,128,128,1,SGD,CosineAnnealingLR,675.3671737585731,842.5546875,0.0,0.915,0.9156,0.24612385864257813,10000

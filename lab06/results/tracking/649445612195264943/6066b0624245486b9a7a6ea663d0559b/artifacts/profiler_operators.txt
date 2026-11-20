@@ -1,0 +1,31 @@
+Operator | Calls | Self CPU time (ms) | Total CPU time (ms)
+enumerate(DataLoader)#_SingleProcessDataLoaderIter.__next__ | 430 | 29986.295 | 38722.634
+aten::convolution_backward | 860 | 20198.148 | 20467.565
+aten::mkldnn_convolution | 860 | 12373.381 | 14303.472
+forward | 430 | 12317.773 | 39168.489
+aten::max_pool2d_with_indices | 860 | 9245.864 | 9245.864
+aten::threshold_backward | 860 | 5527.727 | 5527.727
+aten::fill_ | 350665 | 4049.738 | 4049.738
+backward | 430 | 3987.505 | 36904.855
+aten::clamp_min | 860 | 2536.607 | 2536.607
+aten::max_pool2d_with_indices_backward | 860 | 2495.674 | 4088.137
+autograd::engine::evaluate_function: MaxPool2DWithIndicesBackward0 | 860 | 1217.384 | 5319.563
+aten::_to_copy | 177040 | 1013.815 | 2348.436
+Optimizer.step#Adam.step | 430 | 836.267 | 1849.521
+aten::div | 58440 | 823.114 | 1445.543
+aten::mm | 860 | 799.127 | 799.294
+aten::copy_ | 287470 | 774.715 | 774.715
+aten::empty_strided | 232482 | 752.921 | 1127.211
+aten::select | 110000 | 605.671 | 672.145
+aten::eq | 55860 | 574.784 | 1200.253
+aten::view | 221720 | 547.850 | 547.850
+aten::addmm | 430 | 509.438 | 520.773
+aten::any | 55000 | 506.299 | 777.970
+aten::empty | 115598 | 466.845 | 2546.223
+aten::sub_ | 55000 | 428.485 | 428.485
+autograd::engine::evaluate_function: ConvolutionBackward0 | 860 | 362.110 | 20843.010
+aten::to | 398766 | 360.996 | 2611.028
+optimizer_step | 860 | 343.810 | 2260.522
+aten::permute | 55000 | 316.960 | 363.644
+aten::lerp_ | 2580 | 307.878 | 307.878
+aten::clone | 55000 | 306.858 | 724.786

@@ -5,7 +5,7 @@
 From the repository root:
 
 ```powershell
-python main.py
+python lab05/src/run_lab.py
 ```
 
 Python 3.11.8, PyTorch 2.3.1+cpu,

@@ -1,0 +1,16 @@
+{
+  "all_required_runs_finished": true,
+  "runs": 17,
+  "all_runs_use_lab03_split": true,
+  "all_runs_use_118634_parameter_cnn": true,
+  "all_training_samples_per_epoch": 55000,
+  "all_test_samples": 10000,
+  "accumulation_max_validation_accuracy_gap": 0.0012000000000000899,
+  "accumulation_max_train_loss_gap": 0.0006706013506109221,
+  "accumulation_same_optimizer_update_counts": true,
+  "recovery_curves_identical": true,
+  "recovery_max_parameter_difference": 0.0,
+  "recovery_interrupted_epoch": 3,
+  "recovery_fresh_process": true,
+  "mlflow_parameters_metrics_artifacts_present": true
+}

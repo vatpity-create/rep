@@ -1,0 +1,17 @@
+{
+  "experiment": "schedule_CosineAnnealingLR",
+  "run_id": "9fb23baf959b4177a6e4aa8014b9d404",
+  "epochs": 10,
+  "batch_size": 128,
+  "effective_batch_size": 128,
+  "num_workers": 1,
+  "optimizer": "Adam",
+  "scheduler": "CosineAnnealingLR",
+  "throughput_samples_s": 434.61383007371217,
+  "peak_rss_mib": 848.96875,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.9262,
+  "test_accuracy": 0.925,
+  "test_loss": 0.2198191146850586,
+  "test_samples": 10000
+}

@@ -1,4 +1,4 @@
-"""Run Lab 05."""
+"""Run Lab 06."""
 
 from __future__ import annotations
 
@@ -10,9 +10,9 @@ from pathlib import Path
 
 def main() -> int:
     repository_root = Path(__file__).resolve().parent
-    runner = repository_root / "lab05" / "src" / "run_lab.py"
+    runner = repository_root / "lab06" / "src" / "run_lab.py"
     interpreter = Path(sys.executable)
-    if find_spec("torch") is None:
+    if find_spec("torch") is None or find_spec("mlflow") is None:
         candidates = (
             repository_root / ".venv" / "Scripts" / "python.exe",
             repository_root / ".venv" / "bin" / "python",

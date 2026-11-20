@@ -1,0 +1,17 @@
+{
+  "experiment": "accumulation",
+  "run_id": "66a7d16354024f598398dd18c990eca0",
+  "epochs": 5,
+  "batch_size": 64,
+  "effective_batch_size": 256,
+  "num_workers": 1,
+  "optimizer": "Adam",
+  "scheduler": "none",
+  "throughput_samples_s": 564.1099946172047,
+  "peak_rss_mib": 844.5390625,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.911,
+  "test_accuracy": 0.9077,
+  "test_loss": 0.2576920593261719,
+  "test_samples": 10000
+}

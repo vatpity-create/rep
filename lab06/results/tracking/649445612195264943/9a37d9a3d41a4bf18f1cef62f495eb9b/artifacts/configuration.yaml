@@ -1,0 +1,60 @@
+seed: 42
+device: cpu
+threads: 4
+data_root: data
+results_dir: lab06/results
+model:
+  suite: matched
+  name: CNN
+  channels:
+  - 48
+  - 128
+  selection_metrics: lab03/results/matched/metrics.csv
+training:
+  epochs: 1
+  batch_size: 128
+  num_workers: 0
+  accumulation_steps: 1
+  optimizer: Adam
+  learning_rate: 0.001
+  momentum: 0.9
+  weight_decay: 0.0
+  scheduler: none
+schedulers:
+  StepLR:
+    step_size: 3
+    gamma: 0.5
+  CosineAnnealingLR:
+    eta_min: 1.0e-05
+  ReduceLROnPlateau:
+    factor: 0.5
+    patience: 1
+    threshold: 0.001
+studies:
+  num_workers:
+  - 0
+  - 1
+  - 2
+  - 4
+  - 8
+  batch_sizes:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+  batch_epochs: 5
+  comparison_epochs: 10
+  sgd_learning_rate: 0.01
+  accumulation_batch_size: 64
+  accumulation_steps: 4
+  interrupt_after_epoch: 3
+memory_sample_seconds: 0.02
+profiling:
+  active_steps_per_window: 8
+mlflow:
+  directory: lab06/results/tracking
+  experiment: Lab 06
+project:
+  student_name: ''
+  student_id: ''

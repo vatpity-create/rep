@@ -1,0 +1,17 @@
+{
+  "experiment": "schedule_StepLR",
+  "run_id": "13510b7d744a44218b9355afaaaa37aa",
+  "epochs": 10,
+  "batch_size": 128,
+  "effective_batch_size": 128,
+  "num_workers": 1,
+  "optimizer": "Adam",
+  "scheduler": "StepLR",
+  "throughput_samples_s": 409.94061533762067,
+  "peak_rss_mib": 842.9453125,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.924,
+  "test_accuracy": 0.9248,
+  "test_loss": 0.22198549652099608,
+  "test_samples": 10000
+}

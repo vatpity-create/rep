@@ -1,0 +1,17 @@
+{
+  "experiment": "workers_0",
+  "run_id": "9a37d9a3d41a4bf18f1cef62f495eb9b",
+  "epochs": 1,
+  "batch_size": 128,
+  "effective_batch_size": 128,
+  "num_workers": 0,
+  "optimizer": "Adam",
+  "scheduler": "none",
+  "throughput_samples_s": 490.9109581072303,
+  "peak_rss_mib": 481.99609375,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.869,
+  "test_accuracy": 0.8709,
+  "test_loss": 0.3567872901916504,
+  "test_samples": 10000
+}

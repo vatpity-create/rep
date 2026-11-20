@@ -234,7 +234,7 @@ def write_report(checks, training, execution, layout, configuration):
 From the repository root:
 
 ```powershell
-python main.py
+python lab05/src/run_lab.py
 ```
 
 Python {configuration['python']}, PyTorch {configuration['packages']['torch']},

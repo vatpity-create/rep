@@ -1,0 +1,17 @@
+{
+  "experiment": "recovery",
+  "run_id": "1218bb1145b8463aad8c1c0a107da6f3",
+  "epochs": 5,
+  "batch_size": 128,
+  "effective_batch_size": 128,
+  "num_workers": 1,
+  "optimizer": "Adam",
+  "scheduler": "none",
+  "throughput_samples_s": 614.4001756117779,
+  "peak_rss_mib": 846.07421875,
+  "peak_gpu_allocated_mib": 0.0,
+  "validation_accuracy": 0.912,
+  "test_accuracy": 0.9087,
+  "test_loss": 0.2672724349975586,
+  "test_samples": 10000
+}

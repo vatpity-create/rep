@@ -1,0 +1,4 @@
+experiment,run_id,epochs,batch_size,effective_batch_size,num_workers,optimizer,scheduler,throughput_samples_s,peak_rss_mib,peak_gpu_allocated_mib,validation_accuracy,test_accuracy,test_loss,test_samples
+schedule_StepLR,13510b7d744a44218b9355afaaaa37aa,10,128,128,1,Adam,StepLR,409.94061533762067,842.9453125,0.0,0.924,0.9248,0.22198549652099608,10000
+schedule_CosineAnnealingLR,9fb23baf959b4177a6e4aa8014b9d404,10,128,128,1,Adam,CosineAnnealingLR,434.61383007371217,848.96875,0.0,0.9262,0.925,0.2198191146850586,10000
+schedule_ReduceLROnPlateau,dba1002e894c434cbd02a7e532960711,10,128,128,1,Adam,ReduceLROnPlateau,485.935849474984,848.40234375,0.0,0.9266,0.9242,0.2311069595336914,10000

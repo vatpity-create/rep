@@ -22,9 +22,21 @@ required top-level version, installs MLflow's dependencies first, then applies
 the course-mandated PyArrow pin. `requirements.txt` remains the authoritative
 list of required versions.
 
+## Run Lab 06
+
+Run `python main.py` to execute the training-pipeline studies configured in
+`lab06/config.yaml`. Each study uses the best CNN architecture from Lab 3 and
+the original Fashion-MNIST split. Results, checkpoints, and MLflow runs are saved
+in `lab06/results/`; the report is `lab06/report.md`.
+
+Run `python main.py --report-only` to check saved evidence and rebuild the report
+without training. Inspect the experiments with
+`mlflow ui --backend-store-uri lab06/results/tracking` in the activated environment.
+The individual project proposal is in `project/proposal.pdf`.
+
 ## Run Lab 05
 
-Run `python main.py` to verify the scalar autodiff engine, train the make_moons
+Run `python lab05/src/run_lab.py` to verify the scalar autodiff engine, train the make_moons
 model, and measure execution modes and tensor contiguity. Results and the report
 are saved in `lab05/`. See `lab05/report.md` for the settings and measurements.
 
