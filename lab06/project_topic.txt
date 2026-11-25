@@ -1,0 +1,37 @@
+Project Topic
+Telegram Account Risk and Profitability Prediction Using Behavioral Data
+
+Student: Ihor Velychko
+Student ID: 72930
+
+Short Description
+Train a compact neural network to estimate the probability that a Telegram account remains available over 7 and 30 days and recovers its purchase and operating costs. Predictions will use account metadata and historical activity available at the assessment date.
+
+Dataset
+A planned, self-collected dataset of authorized account records, with personal identifiers removed. It will include documented region, verified account age when available, purchase price, aggregated chat and activity statistics, availability observations, dates of restrictions or access loss, costs, and attributable revenue. Historical outcomes will provide the training labels.
+
+Implementation Stages
+
+1. Define the prediction targets.
+Choose a documented assessment date for each account. Predict time to the first recorded restriction or loss of access, availability probabilities at 7 and 30 days, and cost recovery within 30 days. Cost recovery means attributable revenue covers the purchase price and operating costs.
+
+2. Collect and label historical data.
+Create an anonymized CSV from account records and permitted activity summaries. Record the assessment date, subsequent outcomes, and the last observation date. Accounts still available at the end of observation have incomplete lifetimes and must be treated as censored observations. Unfinished financial observation windows remain unlabeled.
+
+3. Prepare the input features.
+Use only information available at the assessment date: documented region, verified age, purchase price, and past chat and activity statistics. Remove duplicates, mark uncertain values as missing, and exclude personal identifiers. Future restrictions, revenue, and activity are outcomes, not input features.
+
+4. Create training, validation, and test sets.
+Order accounts by assessment date and use approximately 70% for training, 15% for validation, and 15% for testing. Keep every record from the same account in one partition. Fit missing-value handling, category encoding, and numerical scaling on training data only.
+
+5. Train baseline and neural models.
+Start with logistic regression for fixed-horizon outcomes with known labels. Train a compact PyTorch MLP with a discrete-time survival output and a separate 30-day cost-recovery output. Use a survival loss that accounts for censored observations and binary cross-entropy for known financial outcomes. Start with Adam, learning rate 0.001, batch size 64, and at most 50 epochs. Stop when validation loss has not improved for five epochs.
+
+6. Validate and evaluate the predictions.
+Select model size and training settings using validation data. Derive 7-day and 30-day availability probabilities from the survival output. Evaluate survival predictions with censoring-aware metrics and report ROC-AUC, PR-AUC, and calibration for financial outcomes with complete follow-up. Compare against the baseline on the held-out test set after model selection. Report uncertainty and the number of accounts and observed events.
+
+7. Optimize and benchmark the model.
+Apply INT8 quantization and compare predictive quality before and after compression. Target a serialized model size of at most 5 MB and CPU inference latency of at most 50 ms per prepared account record. Measure batch-size-one latency after warm-up over 100 runs and report the median and 95th percentile.
+
+8. Save a reproducible implementation.
+Store settings in YAML, fix random seeds, and save preprocessing, checkpoints, and MLflow results. Provide one command for training and evaluation, an example prediction, and a short report covering data limitations, measured performance, and deployment constraints.
